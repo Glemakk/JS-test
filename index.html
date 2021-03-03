@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студия</title>
+    <!-- Нормализация файла Modern normalize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <!-- Вставляем шрифты -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Подключение внешнего (external) CSS -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <!-- Добавлен span для стилизации цветом -->
+                <a href="./index.html" aria-label="логотоип сайта" class="nav-logo"><span>Web</span>Studio</a>
+                <button type="button" class="menu-button" 
+                        aria-expanded="false"
+                        aria-controls="menu-container"
+                        data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню"
+                    >
+                    <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+                    <use class="icon-menu" href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+                </button>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="./index.html" class="nav__link current">Студия</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./portfolio.html" class="nav__link">Портфолио</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>                
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <a href="mailto:info@devstudio.com" class="contacts-list__link">
+                                <svg class="contacts-list__icon" width="16" height="12">
+                                    <use href="./images/sprite.svg#mail"></use>
+                                </svg>info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <a href="tel:+380961111111" class="contacts-list__link">
+                                <svg class="contacts-list__icon" width="10" height="16">
+                                    <use href="./images/sprite.svg#tel"></use>
+                                </svg>+38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>                    
+                </div>    
+            </nav>        
+        </div>
+    </header>
+
+    <main>
+            <!--HERO -- Эффективные решения-->
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero__title">Эффективные решения<br>
+                        для вашего бизнеса</h1>
+                    <button class="hero-btn btn" type="button" data-modal-open>Заказать услугу</button>
+                </div>
+            </section>
+            
+          
+<!-- <script src="./js/test.js"></script> -->
+<!-- <script src="./js/17.js"></script> -->
+<!-- <script src="./js/&&.js"></script> -->
+<!-- <script src="./js/switch.js"></script> -->
+<!-- <script src="./js/length-toEnd.js" type="module" ></script> -->
+
+<!-- <script src="./js/module_2.js"></script> -->
+<!-- <script src="./js/2arguments.js"></script> -->
+<!-- <script src="./js/tasksOf2module.js" type="module"></script> -->
+<!-- <script src="./js/Objects_Module3.js" type="module"></script> -->
+
+<script src="./js/autocheck_3module.js" type="module"></script>
+
+
+
+
+    <!-- <script src="./js/menu.js"></script>
+    <script src="./js/modal.js"></script>
+     -->
+    
+</body>
+</html>

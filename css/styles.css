@@ -1,0 +1,749 @@
+:root {
+  --primary-font-color: #212121;
+  --secondary-font-color: #757575;
+  --accent-color: #2196f3;
+  --bg-color: #ffffff;
+  --secondary-bg-color: #f5f4fa;
+  --footer-bg-color: #2f303a;
+
+  --primary-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-font-color);
+  font-family: var(--primary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.block {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.social-list__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.nav__link.current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: -33.5px;
+  left: 0;
+
+  position: absolute;
+  opacity: 1;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.uppertitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--bg-color);
+}
+
+.btn {
+  min-width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  cursor: pointer;
+  border: transparent;
+
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*==================== HEADER ====================*/
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Оформление лого шапка*/
+.nav-logo {
+  color: #000000;
+  text-decoration: none;
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+
+  margin-right: 93px;
+}
+
+.nav-logo span {
+  color: var(--accent-color);
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item:not(:last-child),
+.contacts-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
+  color: var(--primary-font-color);
+  padding: 7px 0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.contacts-list__link:hover,
+.contacts-list__link:focus {
+  color: var(--accent-color);
+}
+
+.nav__link.current {
+  color: var(--accent-color);
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.contacts-list__link {
+  display: flex;
+  color: var(--secondary-font-color);
+  align-items: center;
+  padding: 6px 0;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-list__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+/*==================== END OF HEADER ====================*/
+
+/*==================== HERO ====================*/
+.hero {
+  background-color: var(--footer-bg-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/bg-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.hero__title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.364;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.hero-btn {
+  margin-top: 30px;
+
+  transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+/*==================== END OF HERO ====================*/
+
+/*==================== FEATURES ====================*/
+.features {
+  padding-top: 94px;
+}
+
+.features__list {
+  display: flex;
+}
+
+.features__item {
+  min-width: 270px;
+  height: 251px;
+}
+
+.features__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.features__bg {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f4fa;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.features__icon {
+  fill: var(--primary-font-color);
+}
+
+.features__title {
+  margin-bottom: 10px;
+  color: var(--primary-font-color);
+}
+
+.features__title-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--secondary-font-color);
+}
+/*==================== END OF FEATURES ====================*/
+
+/*==================== ABOUT ====================*/
+.about {
+  display: flex;
+}
+
+.about-title,
+.team-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.666;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+
+.about__list {
+  display: flex;
+}
+
+.about__list-item {
+  display: flex;
+  position: relative;
+}
+
+.about__list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about__list-card {
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  position: absolute;
+}
+
+.about__list-uppertitle {
+  margin: 27px auto;
+  text-align: center;
+
+  color: var(--bg-color);
+}
+
+/*==================== END OF ABOUT ====================*/
+
+/*==================== TEAM ====================*/
+
+.team {
+  background-color: var(--secondary-bg-color);
+}
+
+.team__list {
+  display: flex;
+  /* На перспективу при добавлении контента */
+  /* flex-wrap: wrap; */
+}
+
+.team__list-item {
+  background-color: var(--bg-color);
+  padding-bottom: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__list-item:not(:last-child) {
+  margin-right: 30px;
+}
+/* Альтернатива :not(:last-child) при добавлении контента
+ (в данном случает по 4 в строке) */
+
+/* .team__list-item:not(:nth-child(4n)) {
+  margin-right: 30px;
+} */
+
+.team__list-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.187;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-top: 30px;
+}
+
+.team__list-position {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.187;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-font-color);
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 32px;
+  margin-left: 32px;
+  margin-top: 16px;
+}
+
+.social-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list__link:hover,
+.social-list__link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list__link .social-list__icon {
+  fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list__link:hover .social-list__icon,
+.social-list__link:focus .social-list__icon {
+  fill: var(--bg-color);
+}
+
+/*==================== END OF TEAM ====================*/
+
+/*==================== CLIENTS ====================*/
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.666;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-font-color);
+  margin-bottom: 50px;
+}
+
+.clients__list {
+  display: flex;
+}
+
+.clients__list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients__list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  color: #afb1b8;
+  border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.clients__list-link:hover,
+.clients__list-link:focus {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.clients__list-icon {
+  fill: currentColor;
+}
+
+.clients__list-icon:hover,
+.clients__list-icon:focus {
+  fill: currentColor;
+}
+/*==================== END OF CLIENTS ====================*/
+
+/*==================== FOOTER ====================*/
+.footer {
+  background-color: var(--footer-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer .container {
+  align-items: baseline;
+}
+
+.footer .container {
+  display: flex;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--bg-color);
+  text-decoration: none;
+
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+}
+
+.footer-logo span {
+  color: var(--accent-color);
+}
+
+.address {
+  width: 231px;
+}
+
+.address__list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__list-place {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: var(--bg-color);
+  font-style: normal;
+}
+
+.adress__list-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+}
+
+.footer-social-side {
+  margin-left: 70px;
+}
+
+.footer-social-side_list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.footer-social-side__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-side__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-side__item .social-list__icon {
+  fill: var(--bg-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-right-side {
+  margin-left: 93px;
+}
+
+/* ---- Правый блок Подпишись ---- */
+
+.form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.form__subscribe input {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: var(--footer-bg-color);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 15px 16px;
+}
+
+.form__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form__subscribe {
+  display: flex;
+  width: 358px;
+  height: 50px;
+}
+
+.subscribe-btn {
+  margin-left: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe-btn::after {
+  content: "";
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url("../images/footer/subscribe-icon.svg");
+  background-size: contain;
+}
+
+/*==================== END OF FOOTER ====================*/
+
+/* PORTFOLIO PAGE */
+
+/*==================== FILTERS ====================*/
+.filter-btn {
+  min-width: 73px;
+  padding: 6px 22px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-font-color);
+  background-color: var(--secondary-bg-color);
+  cursor: pointer;
+  border: transparent;
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__filter-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio__filter-list-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+/*==================== END OF FILTERS ====================*/
+
+/*==================== PORTFOLIO LIST ====================*/
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio__list-item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+.portfolio__list-item:nth-child(-n + 6) {
+  margin-bottom: 30px;
+}
+
+/* .portfolio__list-item:nth-child(n + 7) {
+  margin-bottom: 94px;
+} */
+
+.portfolio__list-item {
+  box-sizing: border-box;
+  max-width: 370px;
+  background: #ffffff;
+}
+
+.portfolio__list-link {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__list-link:hover,
+.portfolio__list-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.portfolio-title-block {
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 21px;
+}
+
+.portfolio-title-block__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-font-color);
+  margin-bottom: 4px;
+}
+
+.portfolio-title-block__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+  color: var(--secondary-font-color);
+}
+
+.portfolio-drawer-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio__list-link:hover .portfolio-drawer,
+.portfolio__list-link:focus .portfolio-drawer {
+  transform: translateY(0);
+}
+
+.portfolio-drawer__desc {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+
+  color: var(--bg-color);
+}
+/*==================== END OF PORTFOLIO LIST ====================*/
+
+/*==================== BACKDROP ====================*/
+
+/*==================== END OF BACKDROP ====================*/

@@ -1,0 +1,110 @@
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: -15px;
+  }
+}
+
+.portfolio__list-item {
+  max-width: 450px;
+  background: #ffffff;
+
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 370px;
+
+    // &:nth-child(-n + 6) {
+    //   margin-bottom: 30px;
+    // }
+    // &:not(:nth-child(3n)) {
+    //   margin-right: 30px;
+    // }
+  }
+}
+
+/* .portfolio__list-item:nth-child(n + 7) {
+  margin-bottom: 94px;
+} */
+
+.portfolio__list-link {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio-title-block {
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px 21px;
+}
+
+.portfolio-title-block__title {
+  @include fontOptions(700, 18px, 36px);
+  letter-spacing: 0.06em;
+  color: var(--primary-font-color);
+  margin-bottom: 4px;
+}
+
+.portfolio-title-block__subtitle {
+  @include fontOptions(400, 16px, 30px);
+  letter-spacing: 0.03em;
+  color: var(--secondary-font-color);
+}
+
+.portfolio-drawer-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .portfolio__list-link:hover &,
+  .portfolio__list-link:focus & {
+    transform: translateY(0);
+  }
+}
+
+.portfolio-drawer__desc {
+  @include fontOptions(400, 18px, 28px);
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
+
+  color: var(--bg-color);
+}
+
+.height {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 146px;
+  }
+}

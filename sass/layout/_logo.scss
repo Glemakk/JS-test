@@ -1,0 +1,39 @@
+.nav-logo {
+  color: #000000;
+  text-decoration: none;
+  font-family: var(--logo-font);
+  @include fontOptions(700, 24px, 28px);
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include fontOptions(700, 26px, 31px);
+    margin-right: 93px;
+  }
+}
+
+.nav-logo span {
+  color: var(--accent-color);
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--bg-color);
+  text-decoration: none;
+
+  font-family: var(--logo-font);
+  @include fontOptions(700, 24px, 28px);
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    @include fontOptions(700, 26px, 31px);
+  }
+}
+
+.footer-logo span {
+  color: var(--accent-color);
+}
